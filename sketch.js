@@ -16,7 +16,9 @@ let board = [
     createCanvas(400, 400);
     w = width / 4;
     h = height / 4;
-    bestMove();
+    let first = Math.floor(Math.random() * 4);
+    let second = Math.floor(Math.random() * 4);
+    board[first][second] = ai;
   }
 
   
@@ -83,7 +85,6 @@ let board = [
   function draw() {
     stroke(0, 0, 0);
     strokeWeight(4);
-  
     line(w, 0, w, height);
     line(w * 2, 0, w * 2, height);
     line(w * 3, 0, w * 3, height);
